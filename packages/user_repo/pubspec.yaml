@@ -1,0 +1,9 @@
+name: user_repo
+description: manages user domain
+publish_to: none
+environment:
+  sdk: '>=3.2.2 <4.0.0'
+dependencies:
+  #Prevent unnecessary rebuilds with Equatable
+  equatable: ^2.0.3
+  uuid: ^3.0.0
