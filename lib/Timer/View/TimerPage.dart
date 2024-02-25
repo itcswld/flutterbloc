@@ -6,7 +6,7 @@ import 'package:flutterbloc/Timer/ticker.dart';
 import 'TimerView.dart';
 
 class TimerPage extends StatelessWidget {
-  static String id = 'TimerPage';
+  static const String id = 'TimerPage';
   const TimerPage({super.key});
 
   @override

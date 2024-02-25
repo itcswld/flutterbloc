@@ -18,12 +18,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       : _authRepo = authRepo,
         _userRepo = userRepo,
         super(const AuthState.unknown()) {
+    _authStatusSubscription = _authRepo.status.listen((status) {
+      add(AuthStatusChanged(status));
+    });
+
     on<AuthStatusChanged>(_onAuthStatusChanged);
     on<AuthLogoutRequested>((event, emit) {
       _authRepo.logout();
-    });
-    _authStatusSubscription = _authRepo.status.listen((status) {
-      add(AuthStatusChanged(status));
     });
   }
 

@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterbloc/Counter/View/CounterPage.dart';
 import 'package:flutterbloc/InfiniteList/View/PostsPage.dart';
+import 'package:flutterbloc/Login/View/login_page.dart';
 import 'package:flutterbloc/bloc_observer.dart';
 
 import 'Timer/View/TimerPage.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         CounterPage.id: (_) => const CounterPage(),
         TimerPage.id: (_) => const TimerPage(),
         PostsPage.id: (_) => const PostsPage(),
+        LoginPage.id: (_) => const LoginPage(),
       },
     );
   }

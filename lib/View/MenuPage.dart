@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterbloc/Counter/View/CounterPage.dart';
 import 'package:flutterbloc/InfiniteList/View/PostsPage.dart';
 
+import '../Login/View/login_page.dart';
 import '../Timer/View/TimerPage.dart';
 
 class MenuPage extends StatefulWidget {
@@ -19,24 +20,30 @@ class _MenuPageState extends State<MenuPage> {
       appBar: AppBar(
         title: const Text('Menu'),
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           children: [
-            TextButton(
-                onPressed: () =>
-                    Navigator.pushReplacementNamed(context, CounterPage.id),
-                child: const Text('Counter')),
-            TextButton(
-                onPressed: () =>
-                    Navigator.pushReplacementNamed(context, TimerPage.id),
-                child: const Text('Timer')),
-            TextButton(
-                onPressed: () =>
-                    Navigator.pushReplacementNamed(context, PostsPage.id),
-                child: const Text('Infinite List'))
+            _PageBtn(id: CounterPage.id, name: 'Counter'),
+            _PageBtn(id: TimerPage.id, name: 'Timer'),
+            _PageBtn(id: PostsPage.id, name: 'Infinite List'),
+            _PageBtn(id: LoginPage.id, name: 'Login'),
           ],
         ),
       ),
     );
+  }
+}
+
+class _PageBtn extends StatelessWidget {
+  final String id;
+  final String name;
+
+  const _PageBtn({required this.id, required this.name});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+        onPressed: () => Navigator.pushReplacementNamed(context, id),
+        child: Text(name));
   }
 }
