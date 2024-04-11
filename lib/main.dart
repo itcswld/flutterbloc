@@ -1,15 +1,26 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterbloc/Counter/View/CounterPage.dart';
-import 'package:flutterbloc/InfiniteList/View/PostsPage.dart';
+import 'package:flutterbloc/InfiniteList/View/posts_page.dart';
 import 'package:flutterbloc/Login/View/login_page.dart';
 import 'package:flutterbloc/bloc_observer.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:weather_repo/weather_repo.dart';
 
-import 'Timer/View/TimerPage.dart';
+import 'Timer/View/timer_page.dart';
 import 'View/MenuPage.dart';
+import 'Weather/view/weather_view.dart';
 
-void main() {
+//Entrypoint
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = const ObserveBlocs();
+  HydratedBloc.storage = await HydratedStorage.build(
+    storageDirectory: kIsWeb
+        ? HydratedStorage.webStorageDirectory
+        : await getTemporaryDirectory(),
+  );
   runApp(const MyApp());
 }
 
@@ -33,6 +44,7 @@ class MyApp extends StatelessWidget {
         TimerPage.id: (_) => const TimerPage(),
         PostsPage.id: (_) => const PostsPage(),
         LoginPage.id: (_) => const LoginPage(),
+        WeatherApp.id: (_) => WeatherApp(weatherRepo: WeatherRepo()),
       },
     );
   }

@@ -16,18 +16,30 @@ dependencies:
 #  rxdart: ^0.27.7
   bloc_concurrency: ^0.2.4
   stream_transform: ^2.0.0
+  #automatically persists and restores bloc and cubit states
+  hydrated_bloc: ^9.1.5
   formz: ^0.7.0
+  json_annotation: ^4.8.1
+  path_provider: ^2.1.2
+  google_fonts: ^6.2.1
 
   #internal packages
   auth_repo:
     path: packages/auth_repo
   user_repo:
     path: packages/user_repo
+  weather_repo:
+    path: packages/weather_repo
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  bloc_test: ^9.1.7
+  build_runner: ^2.4.9
+  json_serializable: ^6.7.1
+  mocktail: ^1.0.3
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/

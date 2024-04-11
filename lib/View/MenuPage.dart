@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbloc/Counter/View/CounterPage.dart';
-import 'package:flutterbloc/InfiniteList/View/PostsPage.dart';
+import 'package:flutterbloc/InfiniteList/View/posts_page.dart';
 
 import '../Login/View/login_page.dart';
-import '../Timer/View/TimerPage.dart';
+import '../Timer/View/timer_page.dart';
+import '../Weather/view/weather_view.dart';
 
 class MenuPage extends StatefulWidget {
   static const id = 'MenuPage';
@@ -27,6 +28,7 @@ class _MenuPageState extends State<MenuPage> {
             _PageBtn(id: TimerPage.id, name: 'Timer'),
             _PageBtn(id: PostsPage.id, name: 'Infinite List'),
             _PageBtn(id: LoginPage.id, name: 'Login'),
+            _PageBtn(id: WeatherApp.id, name: 'WeatherApp')
           ],
         ),
       ),

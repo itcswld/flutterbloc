@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutterbloc/Timer/BLOC/timer_bloc.dart';
+import 'package:flutterbloc/Timer/bloc/timer_bloc.dart';
 
 //uses a BlocBuilder to rebuild the UI every time we get a new TimerState
 class ActionButtons extends StatelessWidget {

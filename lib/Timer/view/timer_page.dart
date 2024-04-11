@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutterbloc/Timer/BLOC/timer_bloc.dart';
 import 'package:flutterbloc/Timer/ticker.dart';
 
-import 'TimerView.dart';
+import 'timer_view.dart';
 
 class TimerPage extends StatelessWidget {
   static const String id = 'TimerPage';

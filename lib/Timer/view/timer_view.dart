@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutterbloc/Timer/BLOC/timer_bloc.dart';
-import 'package:flutterbloc/Timer/View/ActionButtons.dart';
-import 'package:flutterbloc/Timer/View/Background.dart';
+import 'package:flutterbloc/Timer/View/action_buttons.dart';
+import 'package:flutterbloc/Timer/View/background.dart';
 import 'package:flutterbloc/View/MenuPage.dart';
 
 class TimerView extends StatelessWidget {

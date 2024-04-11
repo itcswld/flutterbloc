@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutterbloc/InfiniteList/BLOC/post_bloc.dart';
-import 'package:flutterbloc/InfiniteList/View/PostsView.dart';
+import 'package:flutterbloc/InfiniteList/bloc/post_bloc.dart';
+import 'package:flutterbloc/InfiniteList/view/posts_view.dart';
 import 'package:flutterbloc/View/MenuPage.dart';
 import 'package:http/http.dart' as http;
 
